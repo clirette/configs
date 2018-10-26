@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
   export ZSH="/home/chase/.oh-my-zsh"
 
+export PATH=$PATH:/home/chase/Applications/hub-linux-amd64-2.5.1/bin/hub
+export GITHUB_USER='clirette'
+export GITHUB_PASSWORD='dhi2th3b32t'
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
