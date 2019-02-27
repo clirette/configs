@@ -6,7 +6,7 @@
 
 export PATH=$PATH:/home/chase/Applications/hub-linux-amd64-2.5.1/bin/hub
 export GITHUB_USER='clirette'
-export GITHUB_PASSWORD='dhi2th3b32t'
+export GITHUB_PASSWORD=`cat ~/.version-test | base64 -d`
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -73,6 +73,7 @@ plugins=(
   node
   last-working-dir
   colored-man-pages
+  virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -107,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 cd() { builtin cd "$@" && ls; }
 alias xc='xclip -selection c'
-alias 209='cat /media/chase/ExtraDrive/PreviousSemesters/Fall2017/SystemsProg/.pass.txt | xclip -selection c ; ssh clirett1@math209.cs.uno.edu;'
+alias 209='ssh clirett1@math209.cs.uno.edu'
 alias gimme='sudo apt-get update && sudo apt-get install'
 alias hdd='cd /media/chase/ExtraDrive'
 alias groot='cd $(git rev-parse --show-toplevel)'
@@ -122,3 +123,12 @@ function mkcd {
     cd $1
 }
 
+alias aptsl='sudo apt-cache search --full --names-only'
+alias apts='sudo apt-cache search --names-only'
+alias nodeign='wget https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -O .gitignore'
+alias spotify='/usr/bin/spotify --force-device-scale-factor=2.0'
+alias mrclean='sudo apt-get autoclean && sudo apt-get autoremove'
+alias vpn='sudo openvpn /etc/openvpn/ovpn_tcp/ch10.nordvpn.com.tcp.ovpn'
+alias vpn1='sudo openvpn /etc/openvpn/ovpn_tcp/ch20.nordvpn.com.tcp.ovpn'
+alias vpn2='sudo openvpn /etc/openvpn/ovpn_tcp/ch25.nordvpn.com.tcp.ovpn'
+alias rmlock='sudo rm /var/lib/apt/lists/lock'
