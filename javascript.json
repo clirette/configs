@@ -16,23 +16,35 @@
 	"Express Route": {
 		"prefix": "exapi",
 		"body": [
-			"router.${1:verb}('/${2:route}', (req, res) => {",
-			"  $3",
+			"${1:router}.${2:verb}('/${3:route}', (req, res) => {",
+			"  $4",
 			"});"
 		],
 		"description": "Express Route"
 	},
 	"Express Boilerplate": {
-		"prefix": "appjs",
+		"prefix": "expsrv",
 		"body": [
 			"const express = require('express');",
+			"$1",
 			"",
 			"const app = express();",
 			"",
-			"const port = process.env.PORT || 8000;",
+			"// Middleware setup",
+			"$2",
 			"",
+			"const port = process.env.PORT || 8000;",
 			"app.listen(port, () => console.log('App Started'));"
 		],
 		"description": "Express Boilerplate"
+	},
+	"Array Methods": {
+		"prefix": "arrmth",
+		"body": [
+			"${1|forEach,map,filter,some,reduce,find|}((${2:item}) => {",
+			"  $3",
+			"});"
+		],
+		"description": "Array Methods"
 	}
 }
