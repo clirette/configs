@@ -1,0 +1,38 @@
+{
+	"Console Log": {
+		"prefix": "cl",
+		"body": "console.log($1);",
+		"description": "Console Log"
+	},
+	"Named Function": {
+		"prefix": "nfn",
+		"body": [
+			"function ${1:functionName}($2) {",
+			"  $3",
+			"}"
+		],
+		"description": "Named Function"
+	},
+	"Express Route": {
+		"prefix": "exapi",
+		"body": [
+			"router.${1:verb}('/${2:route}', (req, res) => {",
+			"  $3",
+			"});"
+		],
+		"description": "Express Route"
+	},
+	"Express Boilerplate": {
+		"prefix": "appjs",
+		"body": [
+			"const express = require('express');",
+			"",
+			"const app = express();",
+			"",
+			"const port = process.env.PORT || 8000;",
+			"",
+			"app.listen(port, () => console.log('App Started'));"
+		],
+		"description": "Express Boilerplate"
+	}
+}
