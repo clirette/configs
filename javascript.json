@@ -46,5 +46,12 @@
 			"});"
 		],
 		"description": "Array Methods"
+	},
+	"Add Event Listener": {
+		"prefix": "ael",
+		"body": [
+			"${1:element}.addEventListener('${2:event}', ${3:function});"
+		],
+		"description": "Add Event Listener"
 	}
 }
